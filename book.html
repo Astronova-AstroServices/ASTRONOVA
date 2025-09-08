@@ -452,42 +452,81 @@ nav a:hover:not(.active) {
     }
 
     /* Footer */
- .bottom-footer {
-  background: linear-gradient(90deg, #d5c6de, #fff);
+.bottom-footer {
+  background: linear-gradient(90deg, #d5c6de 50%, #fff 100%);
   padding: 16px 0;
   font-family: "Playfair Display", serif;
   font-size: 1rem;
-  color: #222;
-  border-top: 1px solid #ccc;
+  color: #222e38;
+  border-top: 1px solid #e2eaf2;
 }
 
+.footer-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+  flex-wrap: wrap;
+}
 
-    .footer-row {
-      max-width: 1200px;
-      margin: auto;
-      padding: 0 24px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      flex-wrap: wrap;
-    }
+.footer-left {
+  flex: 1.2;
+  min-width: 300px;
+  text-align: left;
+  color: #718ca1;
+}
 
-    .footer-row > div {
-      margin: 5px 0;
-    }
+.footer-left strong {
+  color: #6c5ce7; /* blue accent for ASTRONOVA */
+}
 
-    .footer-row a {
-      text-decoration: none;
-      color: var(--nav-accent);
-      font-weight: 700;
-      margin: 0 16px;
-      transition: color 0.3s ease;
-    }
+.footer-center {
+  flex: 1.5;
+  min-width: 100px;
+  text-align: center;
+}
 
-    .footer-row a:hover {
-      color: var(--gold);
-      text-decoration: underline;
-    }
+.footer-center a {
+  color: #6c5ce7;
+  font-weight: 700;
+  text-decoration: none;
+  margin: 0 16px;
+  transition: color 0.2s;
+}
+
+.footer-center a:hover {
+  text-decoration: underline;
+  color: #125c99;
+}
+
+.footer-social-squares {
+  flex: 1;
+  min-width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 50px;
+}
+
+.footer-social-squares a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background: #6755ed;
+  color: #fff;
+  font-size: 1.2em;
+  transition: background 0.2s, color 0.2s;
+}
+
+.footer-social-squares a:hover {
+  background: #125c99;
+  color: #ffd700;
+}
 
     /* Modal Styles (Privacy & Terms share styles) */
     .modal-overlay {
@@ -1221,12 +1260,8 @@ nav a:hover:not(.active) {
           console.error(err);
         });
       });
-
-      // Modal handlers for Privacy and Terms remain unchanged...
-
     });
   </script>
-
 
 </body>
 </html> 
